@@ -1,0 +1,5 @@
+문장을 입력하세요: I like cat. Cat is cute.
+치환되기를 원하는 단어를 입력하세요: cat
+치환할 단어를 입력하세요: dog
+입력한 문장은 'I like cat. Cat is cute.' 입니다.
+치환한 뒤 바뀐 문장은 'I like dog. Cat is cute.' 입니다.
