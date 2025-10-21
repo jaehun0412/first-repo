@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 작성 폼</title>
+</head>
+<body>
+<h1>게시물 작성</h1>
+
+<form th:action="@{/board/write}" method="post" th:object="${board}">
+    <div>
+        <label>이름:</label>
+        <input type="text" th:field="*{name}"/>
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">에러</span>
+    </div>
+
+    <div>
+        <label>제목:</label>
+        <input type="text" th:field="*{title}"/>
+        <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}">에러</span>
+    </div>
+
+    <div>
+        <label>암호:</label>
+        <input type="password" th:field="*{password}"/>
+        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}">에러</span>
+    </div>
+
+    <div>
+        <label>내용:</label>
+        <textarea type="text" th:field="*{content}" rows="5" cols="50"></textarea>
+        <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}">에러</span>
+    </div>
+
+    <div style="margin-top: 20px">
+        <button type="submit">등록</button>
+    </div>
+</form>
+
+</body>
+</html>
